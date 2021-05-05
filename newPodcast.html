@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Podcast Erstellen</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Podcast Erstellen</h1>
+    </header>
+    <nav>
+      <span><a href="index.html">Abonnierte Podcasts</a></span> | 
+      <span><a href="podcast.html">Details zum Podcast</a></span> | 
+      <span><a href="episode.html">Details zur Episode</a></span> | 
+      <span><a href="newPodcast.html">Neue Episode erstellen</a></span>
+    </nav>
+    <main>
+    <form action="https://labs.inf.fh-dortmund.de/podcastService/testCreatePodcast.php" method="POST">
+        <main title="Texteingaben">
+          <p>  
+            <label for="Texteingaben"> 
+                Texteingaben
+            </label>
+            </p>
+      <p>
+        Titel
+        <input
+          name="pctitle"
+          maxlength="100"
+          placeholder="FH Dortmund 2"
+          required 
+          pattern="^[A-Z]{1}[A-Za-z0-9\s]$+"
+          autofocus
+        />
+      </p>
+      <p>
+        Beschreibung
+        <input
+          name="pcdescription"
+          maxlength="500"
+          placeholder="Maximal 500 Buchstaben"
+        />
+      </p>
+      <p>
+        Autor(en)
+        <input
+          name="pcauthors"
+          maxlength="500"
+          placeholder="Autor(en) eingeben"
+          pattern="[A-Za-z\s,]+"
+        />
+      </p>
+      <p>
+        Name des Besitzers
+        <input
+          name="pcownername"
+          placeholder="Max Mustermann"
+          type="text"
+          required
+        />
+      </p>
+      <p>
+        E-Mail des Besitzers
+        <input
+          name="pcowneremail"
+          placeholder="Max.Mustermann@mail.de"
+          required
+          type="email"
+        />
+      </p>
+    </main>
+    <label for="multiplechoice">
+        Kategorien auswählen
+    </label>
+      <p>
+        Kategorie(n)
+        <p>
+            <select name="pccategories" size="3" multiple="" id="multiplechoice">
+            <option value="Technick">Technick</option>
+            <option value="Politik">Politik</option>
+            <option value="Wissenschaft">Wissenschaft</option>
+            </select>
+        </p>
+      </p>
+      
+      <footer>
+          <label for="multiplechoice">
+        Datum und Uhrzeit eingabe
+    </label>
+      <p>
+        Letztes Update(Datum)
+        <input name="pclastupdatedate" required type="date" min="2000-01-01"/>
+      </p>
+      <p>
+        Letztes Update(Uhrzeit)
+        <input name="pclastupdatetime" required type="time" />
+      </p>
+      <p><input type="submit" value="Speichern" /></p>
+      </footer>
+    </form>
+    </main>
+    <footer>&copy; by WebTech.</footer>
+  </body>
+</html>
