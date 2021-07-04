@@ -1,0 +1,31 @@
+/* Prak5: Aufg 4, 1 */
+#mainundaside{
+    display: flex;
+}
+
+main{
+    display: flex;
+    flex-flow: column;
+    height: 400px;
+    flex: 3 60%;
+}
+
+main ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+main div{
+    margin: 10px;
+}
+
+aside ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+ul li{
+    padding: 5px;
+}

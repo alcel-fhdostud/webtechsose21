@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>Podcasts Main</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flexbox.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Abonnierte Podcasts</h1>
+      <h1 id="titel">Abonnierte Podcasts</h1>
       <img
+        id="logo"
         src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
         width="50"
         height="50"
@@ -16,39 +18,43 @@
       />
     </header>
     <nav>
-      <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
-      <span><a class="button" href="podcast.html">Details zum Podcast</a></span> |
-      <span><a class="button" href="episode.html">Details zur Episode</a></span> |
-      <span><a class="button" href="newPodcast.html">Neue Episode erstellen</a></span>
+      <ul>
+        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
+        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
+        <li><a class="button" href="episode.html">Details zur Episode</a></li>
+        <li>
+          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
+        </li>
+      </ul>
     </nav>
-    <form
-      action="https://labs.inf.fh-dortmund.de/podcastService/testPodcastSearch.php"
-      method="GET"
-    >
-      <p>
-        Titel
-        <input
-          name="pctitle"
-          maxlength="100"
-          placeholder="🔎Suchbegriff eingeben"
-          pattern="^[A-Z]{1}[A-Za-z0-9\s]$+"
-        />
-      </p>
-      <p><input type="submit" value="Finden" /></p>
-    </form>
-    <main>
-      <ul>
-        <li><a href="podcast.html">Mein Podcast</a> - 5 Episoden</li>
-        <li><a href="podcast.html">Dein Podcast</a> - 4 Episoden</li>
-      </ul>
-    </main>
-    <aside>
-      <h2>Neueste Episoden</h2>
-      <ul>
-        <li>Heute: Deins</li>
-        <li>Gestern: Du</li>
-      </ul>
-    </aside>
+    <div id="mainundaside">
+      <main>
+        <form
+          action="https://labs.inf.fh-dortmund.de/podcastService/testPodcastSearch.php"
+          method="GET"
+        >
+          Titel
+          <input
+            name="pctitle"
+            maxlength="100"
+            placeholder="🔎Suchbegriff eingeben"
+            pattern="^[A-Z]{1}[A-Za-z0-9\s]$+"
+          />
+          <input type="submit" value="Finden" />
+        </form>
+        <ul id="mainul">
+          <li><a href="podcast.html">Mein Podcast</a> - 5 Episoden</li>
+          <li><a href="podcast.html">Dein Podcast</a> - 4 Episoden</li>
+        </ul>
+      </main>
+      <aside>
+        <h2>Neueste Episoden</h2>
+        <ul>
+          <li>Heute: Deins</li>
+          <li>Gestern: Du</li>
+        </ul>
+      </aside>
+    </div>
     <footer>&copy; by WebTech.</footer>
   </body>
 </html>

@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Podcast Erstellen</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Podcast Erstellen</h1>
+      <h1 id="titel">Abonnierte Podcasts</h1>
       <img
+        id="logo"
         src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
         width="50"
         height="50"
@@ -16,118 +17,77 @@
       />
     </header>
     <nav>
-      <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
-      <span><a class="button" href="podcast.html">Details zum Podcast</a></span> |
-      <span><a class="button" href="episode.html">Details zur Episode</a></span> |
-      <span><a class="button" href="newPodcast.html">Neue Episode erstellen</a></span>
+      <ul>
+        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
+        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
+        <li><a class="button" href="episode.html">Details zur Episode</a></li>
+        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+      </ul>
     </nav>
     <main>
       <form
         action="https://labs.inf.fh-dortmund.de/podcastService/testCreatePodcast.php"
         method="POST"
       >
-        <!-- <main title="Texteingaben">
-          <p>
-            <label for="Texteingaben"> Texteingaben </label>
-          </p> verschachteltes Main Tag ergibt einen Fehler bei w3c validator, 
-          daher ein fieldset -->
         <fieldset>
           <legend>Daten</legend>
-          <p>
-            <label>
-              Titel
-              <input
-                name="pctitle"
-                maxlength="100"
-                placeholder="FH Dortmund 2"
-                required
-                pattern="[A-Z][A-Za-z0-9\s\W]+"
-                autofocus
-            /></label>
-          </p>
-          <p>
-            <label>
-              Beschreibung
-              <input
-                name="pcdescription"
-                maxlength="500"
-                placeholder="Maximal 500 Buchstaben"
-            /></label>
-          </p>
-          <p>
-            <label>
-              Autor(en)
-              <input
-                name="pcauthors"
-                maxlength="500"
-                placeholder="Autor(en) eingeben"
-                pattern="([^,]+[,]?)+[^,^ ]"
-            /></label>
-          </p>
-          <p>
-            <label>
-              Name des Besitzers
-              <input
-                name="pcownername"
-                placeholder="Max Mustermann"
-                type="text"
-                required
-            /></label>
-          </p>
-          <p>
-            <label>
-              E-Mail des Besitzers
-              <input
-                name="pcowneremail"
-                placeholder="Max.Mustermann@mail.de"
-                required
-                type="email"
-            /></label>
-          </p>
-        </fieldset>
-        <article title="Letzte Änderungen">
-          <h4><label for="multiplechoice"> Kategorien auswählen </label></h4>
-          <!-- <p> Doppelte Bezeichnung, da ein Label vorhanden ist
-        Kategorie(n) -->
-          <p>
-            <select name="pccategories" size="3" multiple id="multiplechoice">
-              <option value="Technick">Technick</option>
-              <option value="Politik">Politik</option>
-              <option value="Wissenschaft">Wissenschaft</option>
-            </select>
-          </p>
-        </article>
-        <!-- </p> -->
 
-        <footer>
-          <!-- <label for="lastupdate"> Datum und Uhrzeit eingabe </label> 
-            lieber Label einzeln für beide Elemente-->
-          <fieldset>
-            <legend>Letzte Änderungen.</legend>
-            <p>
-              <label>
-                Datum
-                <input
-                  name="pclastupdatedate"
-                  required
-                  type="date"
-                  min="2000-01-01"
-                />
-              </label>
-              <!-- </p>
-              <p> wieder doppelte Bezeichnung da ein Label vorhanden-->
-              <label>
-                Uhrzeit
-                <input
-                  name="pclastupdatetime"
-                  required
-                  type="time"
-                />
-              </label>
-            </p>
-            <p><input type="submit" value="Speichern" /></p>
-          </fieldset>
-        </footer>
+          <label>
+            Titel
+            <input
+              name="pctitle"
+              maxlength="100"
+              placeholder="FH Dortmund 2"
+              required
+              pattern="[A-Z][A-Za-z0-9\s\W]+"
+              autofocus
+          /></label>
+
+          <label>
+            Beschreibung
+            <input name="pcdescription" maxlength="500" placeholder="Maximal 500 Buchstaben"
+          /></label>
+          <label>
+            Autor(en)
+            <input
+              name="pcauthors"
+              maxlength="500"
+              placeholder="Autor(en) eingeben"
+              pattern="([^,]+[,]?)+[^,^ ]"
+          /></label>
+
+          <label>
+            Name des Besitzers
+            <input name="pcownername" placeholder="Max Mustermann" type="text" required
+          /></label>
+
+          <label>
+            E-Mail des Besitzers
+            <input name="pcowneremail" placeholder="Max.Mustermann@mail.de" required type="email"
+          /></label>
+        </fieldset>
+        <h4><label for="multiplechoice"> Kategorien auswählen </label></h4>
+
+        <select name="pccategories" size="3" multiple id="multiplechoice">
+          <option value="Technick">Technick</option>
+          <option value="Politik">Politik</option>
+          <option value="Wissenschaft">Wissenschaft</option>
+        </select>
+
+        <fieldset>
+          <legend>Letzte Änderungen.</legend>
+
+          <label>
+            Datum
+            <input name="pclastupdatedate" required type="date" min="2000-01-01" />
+          </label>
+          <label>
+            Uhrzeit
+            <input name="pclastupdatetime" required type="time" />
+          </label>
+
+          <input type="submit" value="Speichern" />
+        </fieldset>
       </form>
     </main>
     <aside>

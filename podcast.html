@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Detailseite Podcast</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Abonnierte Podcasts</h1>
+      <h1 id="titel">Abonnierte Podcasts</h1>
       <img
+        id="logo"
         src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
         width="50"
         height="50"
@@ -17,27 +18,35 @@
       />
     </header>
     <nav>
-      <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
-      <span><a class="button" href="podcast.html">Details zum Podcast</a></span> |
-      <span><a class="button" href="episode.html">Details zur Episode</a></span> |
-      <span><a class="button" href="newPodcast.html">Neue Episode erstellen</a></span>
+      <ul>
+        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
+        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
+        <li><a class="button" href="episode.html">Details zur Episode</a></li>
+        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+      </ul>
     </nav>
+
     <main>
       <h2>Mein Podcast</h2>
+      <hr />
       <img
+        id="podcastimg"
         src="https://media.istockphoto.com/vectors/podcast-logotype-vector-id1053623334?s=612x612"
-        height="100"
-        width="100"
+        height="200"
+        width="200"
         alt="Podcast Bild"
       />
-      <hr />
-      <br />
       Dies ist dein Podcast.
       <br />
       Autor: Du. <br />
       Besitzer: <a href="mailto:du@du.com">Du</a>. <br />
       Kategorien: du, dir, deins, deiner. <br />
       Letzes Update: heute.
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, beatae, ullam velit
+          quasi suscipit similique, magnam neque voluptas dolore quisquam accusamus tenetur
+          blanditiis. Quisquam doloribus consequatur ipsum neque magni corporis.
+        </p>
       <h2>Episodenübersicht</h2>
       <table>
         <thead class="colored">

@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>Episode</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flexbox.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Abonnierte Podcasts</h1>
+      <h1 id="titel">Abonnierte Podcasts</h1>
       <img
+        id="logo"
         src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
         width="50"
         height="50"
@@ -16,32 +18,42 @@
       />
     </header>
     <nav>
-      <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
+      <ul>
+        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
+        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
+        <li><a class="button" href="episode.html">Details zur Episode</a></li>
+        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+      </ul>
+      <!-- <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
       <span><a class="button" href="podcast.html">Details zum Podcast</a></span> |
       <span><a class="button" href="episode.html">Details zur Episode</a></span> |
-      <span><a class="button" href="newPodcast.html">Neue Episode erstellen</a></span>
+      <span><a class="button" href="newPodcast.html">Neue Episode erstellen</a></span> -->
     </nav>
-    <main>
-      <h2>Episode 12</h2>
-      <p>In dieser Episode erfahren wir mehr über dich.</p>
-      Erscheinungsdatum: Gestern Dauer: 1h 30min
-    </main>
-    <footer>
-      <audio controls="">
-        <source
-          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Internationale-ru.ogg"
-          type="audio/ogg"
-        />
-        Ihr Browser unterstützt das audio-Element nicht.
-      </audio>
-    </footer>
-    <aside>
-      <h2>Neueste Episoden</h2>
-      <ul>
-        <li>Heute: Deins</li>
-        <li>Gestern: Du</li>
-      </ul>
-    </aside>
+    <div id="mainundaside">
+      <main>
+        <div id="epinfo">
+          <h2>Episode 12</h2>
+          <p>In dieser Episode erfahren wir mehr über dich.</p>
+          Erscheinungsdatum: Gestern Dauer: 1h 30min
+        </div>
+        <div id="audio">
+          <audio controls="">
+            <source
+              src="https://upload.wikimedia.org/wikipedia/commons/6/69/Internationale-ru.ogg"
+              type="audio/ogg"
+            />
+            Ihr Browser unterstützt das audio-Element nicht.
+          </audio>
+        </div>
+      </main>
+      <aside>
+        <h2>Neueste Episoden</h2>
+        <ul>
+          <li>Heute: Deins</li>
+          <li>Gestern: Du</li>
+        </ul>
+      </aside>
+    </div>
     <footer>&copy; by WebTech.</footer>
   </body>
 </html>
