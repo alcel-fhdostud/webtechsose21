@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Podcasts Main</title>
+    <link rel="stylesheet" href="flexbox.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="titel">Abonnierte Podcasts</h1>
+      <img
+        id="logo"
+        src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+        width="50"
+        height="50"
+        alt="Doge Bild"
+      />
+    </header>
+    <nav>
+      <ul>
+        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
+        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
+        <li><a class="button" href="episode.html">Details zur Episode</a></li>
+        <li>
+          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainundaside">
+      <main>
+        <form
+          action="https://labs.inf.fh-dortmund.de/podcastService/testPodcastSearch.php"
+          method="GET"
+        >
+          Titel
+          <input
+            name="pctitle"
+            maxlength="100"
+            placeholder="🔎Suchbegriff eingeben"
+            pattern="^[A-Z]{1}[A-Za-z0-9\s]$+"
+          />
+          <input type="submit" value="Finden" />
+        </form>
+        <ul id="mainul">
+          <li onclick="podcast.html">
+            <a href="podcast.html"
+              ><figure>
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                  width="150"
+                  height="150"
+                  alt="Doge Bild"
+                />
+              </figure>
+              Hunde Podcast</a
+            >
+          </li>
+          <li>
+            <a href="podcast.html">
+              <figure>
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                  width="150"
+                  height="150"
+                  alt="Doge Bild"
+                />
+              </figure>
+              Hunde Podcast Copycat</a
+            >
+          </li>
+          <li>
+            <a href="podcast.html"
+              ><figure>
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                  width="150"
+                  height="150"
+                  alt="Doge Bild"
+                />
+              </figure>
+              Hunde Podcast 2</a
+            >
+          </li>
+          <li>
+            <a href="podcast.html"
+              ><figure>
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                  width="150"
+                  height="150"
+                  alt="Doge Bild"
+                />
+              </figure>
+              Hunde Podcast Returns</a
+            >
+          </li>
+        </ul>
+      </main>
+      <aside>
+        <h2>Neueste Episoden</h2>
+        <ul>
+          <li>Heute: Deins</li>
+          <li>Gestern: Du</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>&copy; by WebTech.</footer>
+  </body>
+</html>
