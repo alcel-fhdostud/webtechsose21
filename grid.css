@@ -1,0 +1,79 @@
+/* Prak6: Aufg1, 1 */
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main aside"
+    "main main aside"
+    "footer footer footer";
+  grid-template-columns: 40% 40% 20%;
+  grid-template-rows: 1fr 1fr 4fr 4fr;
+}
+
+#detailmain{
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "info podcastimg "
+    "epliste podcastimg ";
+  grid-template-columns: 50% 50%;
+}
+
+#newpodmain {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "newform newform "
+      "newform newform ";
+    grid-template-columns: 50% 50%;
+  }
+
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+
+#info {
+  grid-area: info;
+}
+
+#epliste {
+  grid-area: epliste;
+}
+
+#podcastimg {
+  grid-area: podcastimg;
+  padding: 10px;
+}
+
+#newform{
+    grid-area: newform;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+ul li {
+  padding: 5px;
+}
+
+
+main ul{
+    padding: 10px;
+}
+
+
