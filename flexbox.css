@@ -2,6 +2,12 @@
 #mainundaside {
   display: flex;
 }
+/*Prak7: Aufg 1*/
+@media screen and (max-width: 768px) {
+  #mainundaside {
+    flex-direction: column;
+  }
+}
 
 main {
   display: flex;

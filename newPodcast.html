@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="grid.css" />
   </head>
   <body>
-    <script>
-      window.onresize = function () {
-        if (document.body.clientWidth <= 768) {
-          document.body.style.gridTemplateAreas =
-            '"header" "nav" "main" "aside" "footer"';
-        } else {
-          document.body.style.gridTemplateAreas =
-            '"header header header""nav nav nav" "main main aside"  "main main aside" "footer footer footer"';
-        }
-        console.log(document.body);
-      };
-      window.onload = window.onresize;
-    </script>
     <header>
       <h1 id="titel">Abonnierte Podcasts</h1>
       <img

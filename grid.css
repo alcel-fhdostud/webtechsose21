@@ -2,11 +2,22 @@
 body {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "nav nav nav"
-    "main main aside"
-    "main main aside"
-    "footer footer footer";
+    "header header"
+    "nav nav"
+    "main aside"
+    "main aside"
+    "footer footer";
+}
+/* Prak7: Aufg2 */
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav "
+      "main"
+      "aside"
+      "footer";
+  }
 }
 
 #detailmain {
@@ -17,14 +28,21 @@ body {
     "epliste podcastimg ";
   grid-template-columns: 50% 50%;
 }
+/* Prak7: Aufg2 */
+@media screen and (max-width: 480px) {
+  #detailmain {
+    grid-template-areas:
+      "info "
+      "epliste"
+      "podcastimg";
+    grid-template-columns: 1fr;
+  }
+}
 
 #newpodmain {
   grid-area: main;
   display: grid;
-  grid-template-areas:
-    "newform newform "
-    "newform newform ";
-  grid-template-columns: 50% 50%;
+  grid-template-areas: "newform";
 }
 
 header {
@@ -68,7 +86,7 @@ aside ul {
 ul li {
   padding: 5px;
 }
-
-main ul {
-  padding: 10px;
+/* Prak7 Aufg 3.2 */
+ul {
+  text-align: center;
 }
