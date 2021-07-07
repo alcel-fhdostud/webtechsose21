@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="grid.css" />
   </head>
   <body>
+    <script>
+      window.onresize = function () {
+        if (document.body.clientWidth <= 768) {
+          document.body.style.gridTemplateAreas =
+            '"header" "nav" "main" "aside" "footer"';
+        } else {
+          document.body.style.gridTemplateAreas =
+            '"header header header""nav nav nav" "main main aside"  "main main aside" "footer footer footer"';
+        }
+        if (document.body.clientWidth <= 480) {
+          document.getElementById("detailmain").style.gridTemplateAreas =
+            ' "info" "epliste" "podcastimg"';
+        } else {
+          //???
+          document.getElementById("detailmain").style.gridTemplateAreas = "";
+        }
+        console.log(document.getElementById("detailmain").style);
+        console.log(document.body.clientWidth);
+      };
+      window.onload = window.onresize;
+    </script>
     <header>
       <h1 id="titel">Abonnierte Podcasts</h1>
       <img
@@ -20,10 +41,14 @@
     <nav>
       <ul>
         <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
-        <li><a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a></li>
+        <li>
+          <a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a>
+        </li>
         <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
         <li><a class="button" href="episode.html">Details zur Episode</a></li>
-        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+        <li>
+          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
+        </li>
       </ul>
     </nav>
 
@@ -39,9 +64,10 @@
         Kategorien: du, dir, deins, deiner. <br />
         Letzes Update: heute.
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, beatae, ullam velit
-          quasi suscipit similique, magnam neque voluptas dolore quisquam accusamus tenetur
-          blanditiis. Quisquam doloribus consequatur ipsum neque magni corporis.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
+          beatae, ullam velit quasi suscipit similique, magnam neque voluptas
+          dolore quisquam accusamus tenetur blanditiis. Quisquam doloribus
+          consequatur ipsum neque magni corporis.
         </p>
       </div>
       <img

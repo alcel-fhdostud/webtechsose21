@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="grid.css" />
   </head>
   <body>
+    <script>
+      window.onresize = function () {
+        if (document.body.clientWidth <= 768) {
+          document.body.style.gridTemplateAreas =
+            '"header" "nav" "main" "aside" "footer"';
+        } else {
+          document.body.style.gridTemplateAreas =
+            '"header header header""nav nav nav" "main main aside"  "main main aside" "footer footer footer"';
+        }
+        console.log(document.body);
+      };
+      window.onload = window.onresize;
+    </script>
     <header>
       <h1 id="titel">Abonnierte Podcasts</h1>
       <img
@@ -20,14 +33,19 @@
     <nav>
       <ul>
         <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
-        <li><a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a></li>
+        <li>
+          <a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a>
+        </li>
         <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
         <li><a class="button" href="episode.html">Details zur Episode</a></li>
-        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+        <li>
+          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
+        </li>
       </ul>
     </nav>
     <main id="newpodmain">
-      <form id="newform"
+      <form
+        id="newform"
         action="https://labs.inf.fh-dortmund.de/podcastService/testCreatePodcast.php"
         method="POST"
       >
@@ -47,7 +65,10 @@
 
           <label>
             Beschreibung
-            <input name="pcdescription" maxlength="500" placeholder="Maximal 500 Buchstaben"
+            <input
+              name="pcdescription"
+              maxlength="500"
+              placeholder="Maximal 500 Buchstaben"
           /></label>
           <label>
             Autor(en)
@@ -60,12 +81,20 @@
 
           <label>
             Name des Besitzers
-            <input name="pcownername" placeholder="Max Mustermann" type="text" required
+            <input
+              name="pcownername"
+              placeholder="Max Mustermann"
+              type="text"
+              required
           /></label>
 
           <label>
             E-Mail des Besitzers
-            <input name="pcowneremail" placeholder="Max.Mustermann@mail.de" required type="email"
+            <input
+              name="pcowneremail"
+              placeholder="Max.Mustermann@mail.de"
+              required
+              type="email"
           /></label>
         </fieldset>
         <h4><label for="multiplechoice"> Kategorien auswählen </label></h4>
@@ -81,7 +110,12 @@
 
           <label>
             Datum
-            <input name="pclastupdatedate" required type="date" min="2000-01-01" />
+            <input
+              name="pclastupdatedate"
+              required
+              type="date"
+              min="2000-01-01"
+            />
           </label>
           <label>
             Uhrzeit

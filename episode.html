@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script>
+      window.onresize = function () {
+        if (document.body.clientWidth <= 768) {
+          document.getElementById("mainundaside").style.flexDirection =
+            "column";
+        } else {
+          document.getElementById("mainundaside").style.flexDirection = "row";
+        }
+      };
+      window.onload = window.onresize;
+    </script>
     <header>
       <h1 id="titel">Abonnierte Podcasts</h1>
       <img
@@ -20,10 +31,14 @@
     <nav>
       <ul>
         <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
-        <li><a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a></li>
+        <li>
+          <a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a>
+        </li>
         <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
         <li><a class="button" href="episode.html">Details zur Episode</a></li>
-        <li><a class="button" href="newPodcast.html">Neue Episode erstellen</a></li>
+        <li>
+          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
+        </li>
       </ul>
       <!-- <span><a class="button" href="index.html">Abonnierte Podcasts</a></span> |
       <span><a class="button" href="podcast.html">Details zum Podcast</a></span> |
