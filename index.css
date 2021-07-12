@@ -3,6 +3,9 @@
   flex-flow: row;
   flex-wrap: wrap;
 }
+#mainul li:visited {
+  list-style-type: none;
+}
 
 #mainul a {
   display: block;
