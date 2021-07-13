@@ -2,6 +2,9 @@ main{
   display: flex;
   flex: 3 60%;
 }
+li {
+  list-style-type: none ;
+}
 
 a {
   flex-flow: row !important;
