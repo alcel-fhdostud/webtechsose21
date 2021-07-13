@@ -2,6 +2,9 @@
 #mainundaside {
   display: flex;
 }
+#listenAnsichtHTML {
+  display: none;
+}
 /*Prak7: Aufg 1*/
 @media screen and (max-width: 768px) {
   #mainundaside {

@@ -33,7 +33,9 @@ class Podcast {
   addEpisode(episode) {
     this.episoden.push(episode);
     //Haufen 💩
-    //this.episoden.sort(episode.datum);
+    this.episoden.sort(function (x, y) {
+      return new Date(y.datum) - new Date(x.datum);
+    });
   }
 }
 
@@ -86,10 +88,9 @@ var episode2 = new Episode(
   "Episode 2",
   "Es wird über mehr dinge gesprochen",
   5189391,
-  new Date("2021-07-11T17:30:42"),
+  new Date("2021-07-13T17:30:42"),
   audio2
 );
-var episodenArray = [episode1, episode2];
 var podcast1 = new Podcast(
   "Doge Podcast",
   "Hunde",
@@ -102,8 +103,10 @@ var podcast1 = new Podcast(
   new Date("2021-07-11T02:30:02"),
   []
 );
+podcast1.addEpisode(episode1);
+podcast1.addEpisode(episode2);
 var podcast2 = new Podcast(
-  "Podcast2",
+  "Podcast 2",
   "Podcasts",
   "Komitee Dortmund",
   "Dummy2",
@@ -114,11 +117,13 @@ var podcast2 = new Podcast(
   new Date("2021-07-11T02:37:02"),
   []
 );
+podcast2.addEpisode(episode1);
+podcast2.addEpisode(episode2);
 var podcastArray = [podcast1, podcast2];
 
 for (p of podcastArray) {
   console.log(p.titel);
-  for (e of episodenArray) {
+  for (e of p.episoden) {
     console.log("  " + e.titel + " (" + e.getDauerInStundenUndMinuten() + ")");
   }
 }

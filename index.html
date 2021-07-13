@@ -5,6 +5,7 @@
     <title>Podcasts Main</title>
     <link rel="stylesheet" href="flexbox.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" id="kachelAnsichtCSS" href="index.css" />
   </head>
   <body>
     <header>
@@ -45,10 +46,61 @@
           />
           <input type="submit" value="Finden" />
         </form>
-        <ul id="mainul">
-          <li><a href="podcast.html">Mein Podcast</a> - 5 Episoden</li>
-          <li><a href="podcast.html">Dein Podcast</a> - 4 Episoden</li>
-        </ul>
+        <a class="button" id="listenAnsicht" onclick="switchAnsicht(this)"
+          >Listenansicht</a
+        >
+        <a class="button" id="kachelAnsicht" onclick="switchAnsicht(this)"
+          >Kachelansicht</a
+        >
+        <!--Praktikum 9-->
+        <div id="listenAnsichtHTML">
+          <ul id="mainul">
+            <li><a href="podcast.html">Mein Podcast</a> - 5 Episoden</li>
+            <li><a href="podcast.html">Dein Podcast</a> - 4 Episoden</li>
+          </ul>
+        </div>
+        <div id="kachelAnsichtHTML">
+          <ul id="mainul">
+            <li>
+              <img
+                src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                width="150"
+                height="150"
+                alt="Doge Bild"
+              />
+              <a href="podcast.html"> Hunde Podcast</a>
+            </li>
+            <li>
+              <div class="doggo">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                  width="150"
+                  height="150"
+                  alt="Doge Bild"
+                />
+                <a href="podcast.html"> Hunde Podcast Copycat</a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                width="150"
+                height="150"
+                alt="Doge Bild"
+              />
+              <a href="podcast.html"> Hunde Podcast 2</a>
+            </li>
+            <li>
+              <img
+                src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+                width="150"
+                height="150"
+                alt="Doge Bild"
+              />
+              <a href="podcast.html"> Hunde Podcast Returns</a>
+            </li>
+          </ul>
+        </div>
       </main>
       <aside>
         <h2>Neueste Episoden</h2>
@@ -60,5 +112,6 @@
     </div>
     <footer>&copy; by WebTech.</footer>
     <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

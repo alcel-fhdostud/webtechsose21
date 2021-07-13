@@ -73,6 +73,9 @@ aside {
   border-radius: 5px;
   margin: 1px;
 }
+aside ul {
+  list-style: none;
+}
 
 /* Prak4: Aufg 2, 3 + Aufg 3, 2 */
 input[type="submit"]:hover,
@@ -173,4 +176,11 @@ footer {
   h1 {
     display: none !important;
   }
+}
+
+#kachelAnsicht,
+#listenAnsicht {
+  align-content: center;
+  margin: 10px;
+  width: 61.5em;
 }

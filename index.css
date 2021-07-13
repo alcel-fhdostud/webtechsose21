@@ -3,7 +3,7 @@
   flex-flow: row;
   flex-wrap: wrap;
 }
-#mainul li:visited {
+#mainul li {
   list-style-type: none;
 }
 
@@ -13,4 +13,7 @@
 }
 #mainul a:hover {
   background-color: lightsteelblue;
+}
+#kachelAnsicht {
+  display: none;
 }
