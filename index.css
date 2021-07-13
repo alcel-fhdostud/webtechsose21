@@ -1,13 +1,19 @@
-#mainul {
+main{
   display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
+  flex: 3 60%;
 }
 
-#mainul a {
-  display: block;
-  padding: 10px;
+a {
+  flex-flow: row !important;
+  flex-wrap: wrap !important;
+  display: inline-block !important;
 }
-#mainul a:hover {
+
+img{
+  display: inline !important;
+  position: static !important;
+  padding: 15px;
+}
+a:hover {
   background-color: lightsteelblue;
 }
