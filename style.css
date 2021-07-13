@@ -36,25 +36,9 @@ legend {
   color: black;
   font-size: 100%;
   font-weight: bold;
-  position: relative;
-}
-
-legend:before {
-  position: absolute;
-  border-left: 1px gray;
-  content: "(";
-  height: 15px;
-  left: 0px;
-  top: 2px;
-}
-
-legend:after {
-  position: absolute;
-  border-right: 1px gray;
-  content: ")";
-  height: 15px;
-  right: 0px;
-  top: 2px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-radius: 5px;
 }
 
 input {
@@ -162,8 +146,11 @@ nav {
 
 /* Prak5: Aufg 3, 2 */
 footer {
-  position: fixed;
-  bottom: 10px;
+  position: sticky;
+  bottom: 0px;
+  pad: 10px;
+  display: block !important;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
