@@ -7,19 +7,20 @@ main {
 }
 
 a {
-  flex-flow: row !important;
-  flex-wrap: wrap !important;
-  display: inline-block !important;
+  flex-flow: row ;
+  flex-wrap: wrap ;
+  display: inline-block ;
 }
 
-img {
-  display: inline !important;
-  position: static !important;
+.doggo {
+  display: inline ;
+  position: static ;
   padding: 15px;
 }
 a:hover {
   background-color: lightsteelblue;
 }
-#kachelAnsicht {
-  display: none;
+#btnKachelAnsicht {
+  display: none !important;
 }
+

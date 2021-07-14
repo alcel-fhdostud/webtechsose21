@@ -142,14 +142,15 @@ nav {
   position: sticky;
   top: 0px;
   background-color: #ffffff;
+  text-align: center;
 }
 
 /* Prak5: Aufg 3, 2 */
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0px;
   pad: 10px;
-  display: block !important;
+  display: block ;
   background-color: #ffffff;
 }
 
@@ -165,9 +166,9 @@ footer {
   }
 }
 
-#kachelAnsicht,
-#listenAnsicht {
+#btnKachelAnsicht,
+#btnListenAnsicht {
   align-content: center;
   margin: 10px;
-  width: 61.5em;
+  width: max-content;
 }
