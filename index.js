@@ -11,7 +11,7 @@ function switchAnsicht(e) {
     //kachelansicht wird sichtbar
     document.getElementById("btnListenAnsicht").style.display = "flex";
     document.getElementById("listenAnsichtHTML").style.display = "none";
-    document.getElementById("kachelAnsichtHTML").style.display = "flex";
+    document.getElementById("kachelAnsichtHTML").style.display = "";
     document
       .getElementById("kachelAnsichtCSS")
       .setAttribute("href", "index.css");

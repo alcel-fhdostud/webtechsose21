@@ -7,15 +7,16 @@ main {
 }
 
 a {
-  flex-flow: row ;
-  flex-wrap: wrap ;
-  display: inline-block ;
+  flex-flow: row;
+  flex-wrap: wrap;
+  display: inline-block;
 }
 
 .doggo {
-  display: inline ;
-  position: static ;
   padding: 15px;
+}
+.doggo #text {
+  align-self: flex-start;
 }
 a:hover {
   background-color: lightsteelblue;
@@ -23,4 +24,3 @@ a:hover {
 #btnKachelAnsicht {
   display: none !important;
 }
-
