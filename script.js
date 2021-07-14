@@ -32,7 +32,6 @@ class Podcast {
   //8.3
   addEpisode(episode) {
     this.episoden.push(episode);
-    //Haufen 💩
     this.episoden.sort(function (x, y) {
       return new Date(y.datum) - new Date(x.datum);
     });
