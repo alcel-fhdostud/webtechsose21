@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  flex: 3 60%;
+}
+#mainul li {
+  list-style-type: none;
+}
+
+a {
+  flex-flow: row;
+  flex-wrap: wrap;
+  display: inline-block;
+}
+
+.doggo {
+  padding: 15px;
+}
+.doggo #text {
+  align-self: flex-start;
+}
+a:hover {
+  background-color: lightsteelblue;
+}
+#btnKachelAnsicht {
+  display: none !important;
+}
