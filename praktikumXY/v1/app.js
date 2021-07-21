@@ -7,16 +7,8 @@ const express = require("express");
 const app = express();
 
 app.get("*", function (req, res) {
-  var format = req.url.substring(req.url.lastIndexOf(".") + 1);
-  console.log(format);
-  res.writeHead(200, { "content-type": `text/${format}; charset=utf-8` });
-  var html = "";
-  startSeite.readFile(route.route(req.url), (err, data) => {
-    if (data != undefined) {
-      html = data.toString();
-      res.end(html);
-    }
-  });
+  res.writeHead(200);
+  route.route(res, req.url);
 });
 
 app.listen(8020, function () {
