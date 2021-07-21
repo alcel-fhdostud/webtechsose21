@@ -18,39 +18,40 @@ app.set("views", "views");
 
 // app.use(express.static("../v0/"));
 //TODO css url ändern
-app.use(express.static("./public"));
+app.use(express.static("./public/"));
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function(req,res){
-  res.render("index");
-  console.log(persistence.podcasts[0].titel);
+app.get("/", function (req, res) {
+  res.render("index", { podcasts: persistence.podcasts });
+  //console.log(persistence.podcasts[0].bildURL);
 });
+// https://feeds.lagedernation.org/feeds/ldn-mp3.xml
 
-
-// app.get("/episode?pc=*&ep=*", function(req, res, next){  
-//   buildHTML(res, 1, 1);
-// });
-
-
-app.get("/podcast", function(req, res){
-  let podcastNumber = req.query.pc;
-  let episodenNummer = req.query.ep;
-    temp.buildHTML(res, podcastNumber, episodenNummer);
-
-});
-
-
-
-app.post("/abonnieren", function(req,res){
-  console.log("testAbo");
-  persistence.abonnieren(req.body.aboBtn, () => 
-          { console.log("Podcasts importiert.");
+app.get("/podcast", function (req, res) {
+  let podcastNummer = req.query.pc;
+  res.render("./podcast", {
+    p: persistence.podcasts[podcastNummer],
+    index: podcastNummer,
   });
-  res.redirect("/");
 });
 
+app.get("/episode", function (req, res) {
+  let podcastNummer = req.query.pc;
+  let episodenNummer = req.query.ep;
+  res.render("./episode", {
+    p: persistence.podcasts[podcastNummer],
+    indexPodcast: podcastNummer,
+    indexEpisode: episodenNummer,
+  });
+  //temp.buildHTML(res, persistence.podcasts, podcastNumber, episodenNummer);
+});
 
+app.post("/abonnieren", function (req, res) {
+  persistence.abonnieren(req.body.aboBtn, () => {
+    res.redirect("/");
+  });
+});
 
 app.listen(8020, function () {
   console.log("Ich lausche nun auf http://localhost:8020");

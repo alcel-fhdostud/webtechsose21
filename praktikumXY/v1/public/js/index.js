@@ -14,6 +14,6 @@ function switchAnsicht(e) {
     document.getElementById("kachelAnsichtHTML").style.display = "";
     document
       .getElementById("kachelAnsichtCSS")
-      .setAttribute("href", "index.css");
+      .setAttribute("href", "./css/index.css");
   }
 }
