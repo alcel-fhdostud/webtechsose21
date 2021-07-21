@@ -3,34 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Podcasts Main</title>
-    <link rel="stylesheet" href="flexbox.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" id="kachelAnsichtCSS" href="index.css" />
+    <link rel="stylesheet" href="./css/flexbox.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" id="kachelAnsichtCSS" href="./css/index.css" />
   </head>
   <body>
-    <header>
-      <h1 id="titel">Abonnierte Podcasts</h1>
-      <img
-        id="logo"
-        src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
-        width="50"
-        height="50"
-        alt="Doge Bild"
-      />
-    </header>
-    <nav>
-      <ul>
-        <li><a class="button" href="index.html">Abonnierte Podcasts</a></li>
-        <li>
-          <a class="button" href="index2.html">Abonnierte Podcasts (Kacheln)</a>
-        </li>
-        <li><a class="button" href="podcast.html">Details zum Podcast</a></li>
-        <li><a class="button" href="episode.html">Details zur Episode</a></li>
-        <li>
-          <a class="button" href="newPodcast.html">Neue Episode erstellen</a>
-        </li>
-      </ul>
-    </nav>
+    <%- include("header.ejs") %>
+    <%- include("nav.ejs") %>
     <div id="mainundaside">
       <main>
         <form
@@ -105,11 +84,10 @@
           <fieldset>
             <label>
               Titel
-              <input
+              <input name="aboBtn"
                 maxlength="100"
                 placeholder="URL eingeben"
                 required
-                pattern="[A-Z][A-Za-z0-9\s\W]+"
             /></label>
             <input type="submit">
           </fieldset>
@@ -123,8 +101,8 @@
         </ul>
       </aside>
     </div>
-    <footer>&copy; by WebTech.</footer>
-    <script src="script.js"></script>
-    <script src="index.js"></script>
+    <%- include("footer.ejs") %>
+    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

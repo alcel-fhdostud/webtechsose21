@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Podcasts Main</title>
+    <link rel="stylesheet" href="flexbox.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+    <%- include("nav.ejs") %>
+    <div id="mainundaside">
+      <main>
+        <form
+          action="https://labs.inf.fh-dortmund.de/podcastService/testPodcastSearch.php"
+          method="GET"
+        >
+          Titel
+          <input
+            name="pctitle"
+            maxlength="100"
+            placeholder="🔎Suchbegriff eingeben"
+            pattern="^[A-Z]{1}[A-Za-z0-9\s]$+"
+          />
+          <input type="submit" value="Finden" />
+        </form>
+        <div id="Kacheln">
+          <a href="podcast.html">
+            <img class="doggo"
+              src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+              width="150"
+              height="150"
+              alt="Doge Bild"
+            />
+            <div id="text">Hunde Podcast</div>
+          </a>
+          <a href="podcast.html"> 
+            <img class="doggo"
+              src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+              width="150"
+              height="150"
+              alt="Doge Bild"
+            />
+            <div id="text">Hunde Podcast Copycat</div>
+          </a>
+          <a href="podcast.html">
+            <img class="doggo"
+              src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+              width="150"
+              height="150"
+              alt="Doge Bild"
+            />
+            <div id="text">Hunde Podcast 2</div>
+          </a>
+          <a href="podcast.html">
+            <img class="doggo"
+              src="https://images-eu.ssl-images-amazon.com/images/I/81-yKbVND-L.png"
+              width="150"
+              height="150"
+              alt="Doge Bild"
+            />
+            <div id="text">Hunde Podcast Returns</div>
+          </a>
+        </div>
+      </main>
+      <aside>
+        <h2>Neueste Episoden</h2>
+        <ul>
+          <li>Heute: Deins</li>
+          <li>Gestern: Du</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>&copy; by WebTech.</footer>
+  </body>
+</html>

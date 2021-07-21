@@ -115,5 +115,6 @@ function konvertieren(url, feed) {
 }
 // Schnittstelle des Moduls definieren: Podcast-Array und abonnieren-Funktion
 // von außen zugreifbar machen
-module.exports.podcastsArray = podcasts;
-module.exports.abo = abonnieren;
+module.exports.podcasts = podcasts;
+module.exports.abonnieren = abonnieren;
+module.exports.Podcast = Podcast;

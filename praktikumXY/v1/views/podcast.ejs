@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Detailseite Podcast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+  <body>
+    <%- include("header.ejs") %>
+    <%- include("nav.ejs") %>
+    <main id="detailmain">
+      <article id="info">
+        <h2>Mein Podcast</h2>
+        <hr />
+
+        Dies ist dein Podcast.
+        <br />
+        Autor: Du. <br />
+        Besitzer: <a href="mailto:du@du.com">Du</a>. <br />
+        Kategorien: du, dir, deins, deiner. <br />
+        Letzes Update: heute.
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
+          beatae, ullam velit quasi suscipit similique, magnam neque voluptas
+          dolore quisquam accusamus tenetur blanditiis. Quisquam doloribus
+          consequatur ipsum neque magni corporis.
+        </p>
+      </article>
+      <img
+        id="podcastimg"
+        src="https://media.istockphoto.com/vectors/podcast-logotype-vector-id1053623334?s=612x612"
+        height="400"
+        width="400"
+        alt="Podcast Bild"
+      />
+      <article id="epliste">
+        <h2>Episodenübersicht</h2>
+        <table>
+          <thead class="colored">
+            <tr>
+              <th>Titel</th>
+              <th>Datum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="episode.html">Episode 1</a> - Du</td>
+              <td>Gestern</td>
+            </tr>
+            <tr>
+              <td><a href="episode.html">Episode 2</a> - Deins</td>
+              <td>Heute</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+    <aside>
+      <h2>Neueste Episoden</h2>
+      <ul>
+        <li>Heute: Deins</li>
+        <li>Gestern: Du</li>
+      </ul>
+    </aside>
+    <%- include("footer.ejs") %>
+  </body>
+</html>

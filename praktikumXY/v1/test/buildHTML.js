@@ -2,9 +2,9 @@ const { compile } = require("ejs");
 const persistence = require("../models/persistence.js");
 
 function buildHTML(res, podcastNumber, episodenNummer) {
-  const podcasts = persistence.podcastsArray;
-  persistence.abo("https://feeds.lagedernation.org/feeds/ldn-mp3.xml", () => {
-    persistence.abo("https://feeds.metaebene.me/lnp/m4a", () => {
+  const podcasts = persistence.podcasts;
+  persistence.abonnieren("https://feeds.lagedernation.org/feeds/ldn-mp3.xml", () => {
+    persistence.abonnieren("https://feeds.metaebene.me/lnp/m4a", () => {
       // HTML-Inhalt mittels Template-Literal erstellen
       var p = podcasts[podcastNumber];
       var html = `<!DOCTYPE html>
