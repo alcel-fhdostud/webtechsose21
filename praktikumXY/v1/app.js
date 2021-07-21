@@ -8,23 +8,13 @@ const temp = require("./test/buildHTML.js");
 const express = require("express");
 const app = express();
 
-// app.get("*", function (req, res) {
-//   res.writeHead(200);
-//   route.route(res, req.url);
-// });
-
 app.set("view engine", "ejs");
 app.set("views", "views");
-
-// app.use(express.static("../v0/"));
-//TODO css url ändern
 app.use(express.static("./public/"));
-
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", function (req, res) {
   res.render("index", { podcasts: persistence.podcasts });
-  //console.log(persistence.podcasts[0].bildURL);
 });
 // https://feeds.lagedernation.org/feeds/ldn-mp3.xml
 
@@ -44,7 +34,6 @@ app.get("/episode", function (req, res) {
     indexPodcast: podcastNummer,
     indexEpisode: episodenNummer,
   });
-  //temp.buildHTML(res, persistence.podcasts, podcastNumber, episodenNummer);
 });
 
 app.post("/abonnieren", function (req, res) {
